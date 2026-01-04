@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Mohammad Irfan - GIS Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #202124;
+            background-color: #FFFFFF;
+            background-image: radial-gradient(#00E89D 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            color: #23233C;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: #5f6368;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #1a73e8;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: #5f6368;
+        }
+
+        .contact-info a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: #1557b0;
+        }
+
+        nav {
+            background: #ffffff;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            color: #5f6368;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1.2rem 1.5rem;
+            display: block;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            color: #1a73e8;
+            border-bottom-color: #1a73e8;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            color: #23233C;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            color: #5f6368;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 8px;
+            border-left: 4px solid #1a73e8;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #202124;
+            font-weight: 300;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: #ffffff;
+            border: 1px solid #e8eaed;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.15);
+            border-color: #1a73e8;
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #1a73e8;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #5f6368;
+            font-weight: 400;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e8eaed;
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.1);
+            border-color: #1a73e8;
+        }
+
+        .skill-category h3 {
+            color: #1a73e8;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            font-size: 1.3rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skill-category li {
+            padding: 0.6rem 0;
+            color: #5f6368;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f1f3f4;
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-category li::before {
+            content: "→ ";
+            color: #1a73e8;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border: 1px solid #e8eaed;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 16px rgba(26, 115, 232, 0.12);
+            border-color: #1a73e8;
+        }
+
+        .project-card h3 {
+            color: #202124;
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .project-meta {
+            color: #1a73e8;
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+
+        .project-card p {
+            color: #5f6368;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .project-card strong {
+            color: #202124;
+            font-weight: 500;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e8eaed;
+        }
+
+        .timeline-item {
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.4rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #1a73e8;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #1a73e8;
+        }
+
+        .timeline-date {
+            color: #1a73e8;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .timeline-title {
+            font-size: 1.4rem;
+            color: #202124;
+            margin-bottom: 0.3rem;
+            font-weight: 400;
+        }
+
+        .timeline-company {
+            color: #5f6368;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .timeline-item ul {
+            margin-left: 1.5rem;
+            color: #5f6368;
+        }
+
+        .timeline-item li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+            padding: 4rem 3rem;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            margin-top: 5rem;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #00E89D;
+            color: #23233C;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+            border: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 232, 157, 0.3);
+        }
+
+        footer {
+            background: #f8f9fa;
+            color: #5f6368;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 5rem;
+            border-top: 1px solid #e8eaed;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                margin-bottom: 3rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            nav a {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shaik Mohammad Irfan</h1>
+        <p>Technical Specialist & Mapping SME</p>
+        <div class="tagline">
+            Delivering precision mapping solutions for the future of autonomous systems
+        </div>
+        <div class="contact-info">
+            <a href="mailto:irfansmd@yahoo.com">irfansmd@yahoo.com</a>
+            <a href="tel:+918008480076">+91 8008480076</a>
+            <span>Nandyal, Andhra Pradesh, India</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#achievements">Impact</a></li>
+            <li><a href="#skills">Expertise</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About</h2>
+            <p class="section-subtitle">Building the foundation for accurate, scalable mapping systems</p>
+            <div class="highlight-box">
+                <p>
+                    Technical Specialist and Mapping SME with over 8 years of experience in high-precision geospatial operations and process improvement. Proven track record in achieving exceptional data accuracy across large-scale projects involving 80,000+ land parcels. Specialist in resolving technical escalations, coordinating cross-functional workflows, and developing comprehensive technical documentation to streamline map build operations in a cost-efficient manner.
+                </p>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Impact & Achievements</h2>
+            <p class="section-subtitle">Quantifiable results across large-scale mapping operations</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Data Accuracy Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">80K+</div>
+                    <div class="stat-label">Land Parcels Managed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+20%</div>
+                    <div class="stat-label">Efficiency Increase</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">-15%</div>
+                    <div class="stat-label">Rework Reduction</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Maps Digitized</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Expertise</h2>
+            <p class="section-subtitle">Comprehensive skills in geospatial technology and operations</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Mapping Operations</h3>
+                    <ul>
+                        <li>Workflow Streamlining</li>
+                        <li>Process Improvement</li>
+                        <li>Topology Correction</li>
+                        <li>Raster-to-Vector Conversion</li>
+                        <li>Quality Assurance & Control</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>GIS Platforms</h3>
+                    <ul>
+                        <li>QGIS</li>
+                        <li>ArcGIS Pro</li>
+                        <li>Collabland</li>
+                        <li>AutoCAD</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Project Leadership</h3>
+                    <ul>
+                        <li>Technical Documentation (SOPs)</li>
+                        <li>Escalation Resolution</li>
+                        <li>Stakeholder Coordination</li>
+                        <li>Team Training & Management</li>
+                        <li>Cross-functional Collaboration</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Remote Sensing</h3>
+                    <ul>
+                        <li>Drone/UAV Imagery Processing</li>
+                        <li>Photogrammetry</li>
+                        <li>Satellite Imagery Analysis</li>
+                        <li>Aerial Data Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Significant contributions to mapping infrastructure and innovation</p>
+            
+            <div class="project-card">
+                <h3>Large-Scale Land Parcel Digitization</h3>
+                <div class="project-meta">Department of Survey and Land Records | 2022 - Present</div>
+                <p>Led technical operations for digitizing and managing 80,000+ land parcels with exceptional accuracy. Served as the primary escalation point for complex mapping issues and topology errors, ensuring data integrity across the entire dataset.</p>
+                <p><strong>Key Achievement:</strong> Maintained 98% accuracy rate while improving production efficiency by 20% through systematic process optimization and team training.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Drone/UAV Imagery Integration Initiative</h3>
+                <div class="project-meta">Department of Survey and Land Records | 2022 - Present</div>
+                <p>Pioneered new mapping workflows integrating drone and UAV imagery into existing GIS infrastructure. Coordinated with technical partners to establish standardized processes for aerial data capture, processing, and quality validation.</p>
+                <p><strong>Key Achievement:</strong> Successfully piloted integration of modern aerial imagery technology, enabling faster data collection cycles and improved accuracy for infrastructure planning initiatives.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Legacy Map Migration Program</h3>
+                <div class="project-meta">Department of Survey and Land Records | 2021 - 2022</div>
+                <p>Owned end-to-end solutions for converting legacy paper maps into digital GIS formats. Implemented rigorous QA/QC processes to ensure data integrity while maintaining cost-efficiency throughout the migration pipeline.</p>
+                <p><strong>Key Achievement:</strong> Reduced rework by 15% through systematic process improvements and standardized quality control protocols.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Statewide Survey Map Digitization</h3>
+                <div class="project-meta">Andhra Pradesh Space Applications Centre | 2016 - 2019</div>
+                <p>Digitized 2,500+ legacy survey maps into professional vector formats using Collabland software. Coordinated with diverse internal teams to ensure seamless integration of vectorized data into state-level databases and GIS systems.</p>
+                <p><strong>Key Achievement:</strong> Contributed foundational data to comprehensive state-level digital mapping infrastructure, supporting multiple government initiatives.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <p class="section-subtitle">Progressive career growth in geospatial technology</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">February 2022 - Present</div>
+                    <div class="timeline-title">Senior Geospatial Specialist (Technical Operations Lead)</div>
+                    <div class="timeline-company">Department of Survey and Land Records, Nandyal, AP</div>
+                    <ul>
+                        <li>Primary point of contact for resolving complex mapping escalations and topology errors across 80,000+ land parcels</li>
+                        <li>Identified and resolved process bottlenecks, achieving 20% increase in production efficiency while maintaining 98% accuracy</li>
+                        <li>Piloted drone/UAV imagery integration with standardized build processes and quality validation protocols</li>
+                        <li>Developed comprehensive technical documentation and SOPs used to train and manage team of 10 analysts</li>
+                        <li>Collaborated with cross-functional teams to synchronize spatial data between internal databases and municipal GIS frameworks</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2021 - January 2022</div>
+                    <div class="timeline-title">GIS Analyst – Technical Operations</div>
+                    <div class="timeline-company">Department of Survey and Land Records, Nandyal, AP</div>
+                    <ul>
+                        <li>Owned end-to-end solutions for migrating legacy paper maps into digital GIS formats with focus on cost-efficiency and data integrity</li>
+                        <li>Resolved spatial discrepancies through deep-dive analysis (buffer/overlay operations) to support infrastructure and utility planning</li>
+                        <li>Standardized QA/QC design for digitization pipeline, reducing rework by 15% through systemic process improvements</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">October 2019 - December 2020</div>
+                    <div class="timeline-title">Junior GIS Executive</div>
+                    <div class="timeline-company">Department of Survey and Land Records, Nandyal, AP</div>
+                    <ul>
+                        <li>Facilitated transition from legacy CAD systems to core GIS platforms, providing technical guidance to teams on new tool adoption</li>
+                        <li>Digitized high-precision land boundary maps with strict focus on spatial metadata consistency and accuracy standards</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2017 - September 2019</div>
+                    <div class="timeline-title">Digitizer (Full-Time)</div>
+                    <div class="timeline-company">Andhra Pradesh Space Applications Centre, Vijayawada, AP</div>
+                    <ul>
+                        <li>Digitized 2,500+ legacy survey maps into professional vector formats using Collabland software</li>
+                        <li>Executed rigorous QA/QC protocols in AutoCAD to resolve discrepancies between manual records and digital coordinates</li>
+                        <li>Coordinated with diverse internal teams to ensure seamless integration of vectorized data into state databases</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2016 - May 2017</div>
+                    <div class="timeline-title">Intern – Digitizer</div>
+                    <div class="timeline-company">Andhra Pradesh Space Applications Centre, Vijayawada, AP</div>
+                    <ul>
+                        <li>Built foundational technical knowledge in georeferencing and map build standards during state-wide data migration project</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education & Certifications</h2>
+            <p class="section-subtitle">Academic foundation and professional development</p>
+            <div class="project-card">
+                <h3>Bachelor of Engineering in Civil Engineering</h3>
+                <div class="project-meta">JNT University Anantapur, Nandyal | Graduated June 2016</div>
+                <p>Comprehensive engineering education with focus on surveying, geomatics, and infrastructure planning.</p>
+            </div>
+            <div class="highlight-box">
+                <h3 style="color: #1a73e8; margin-bottom: 1.5rem; font-weight: 400;">Professional Certifications</h3>
+                <div>
+                    <span class="cert-badge">QGIS Certified</span>
+                    <span class="cert-badge">AutoCAD Certified</span>
+                    <span class="cert-badge">MS Office Suite</span>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3 style="color: #1a73e8; margin-bottom: 1.5rem; font-weight: 400;">Languages</h3>
+                <p style="color: #5f6368;">English (C1) • Hindi (C1) • Telugu (Native) • Urdu (Proficient)</p>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2>Let's Build the Future of Mapping</h2>
+            <p>Available for opportunities in autonomous vehicle mapping and geospatial technology</p>
+            <a href="https://linkedin.com/in/irfanmaverick" target="_blank" class="cta-button">Connect on LinkedIn</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Shaik Mohammad Irfan</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Precision Mapping • Process Innovation • Technical Leadership</p>
+    </footer>
+</body>
+</html>
